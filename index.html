@@ -5,12 +5,14 @@
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <link rel="stylesheet" type="text/css" href="./css/dark-mode-button.css">
+ 
     </head>
 
     <body>
         <!---Menu do topo-->
-            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <img src="./img/icon.png" width="50">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <img src="./img/globopreto.png" width="50" id="globopreto" value="logo">               
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -37,22 +39,29 @@
                               <a class="dropdown-item" href="#samsung">Samsung</a>
                           </div>
                       </li>
-
                       <li class="nav-item">
-                        <a class="nav-link" href="#serviços">Serviços</a>
+                        <a class="nav-link" href="#servicos">Serviços</a>
                       </li>
-                    </ul>
+                     
+                    </ul> 
+                      <div class="d-flex">
+                                  <!--Dark-mode button-->  
+                             <div id="toggle" class="">
+                                 <i onchange="mudalogo();"  class="indicador"></i>
+                             </div>             
+                      </div>
                 </div>
             </nav>
-        <!--Quem somos-->
+
+            <!--Quem somos-->
             <section id="quemsomos">
                 <div class="container-fluid quemsomos text-center margin">
                     <h1>Quem somos?</h1>
-                    <img src="./img/timedev.png" width="200" height="200" class="rounded-circle">
-                    <h3>Somos os mais tops da galáxia, comprometidos em trazer <br/> o que você precisa para sua empresa.</h3>
+                    <img src="./img/timedev.png" width="300" height="300" class="rounded-circle">
+                    <h3>Somos os mais tops da galáxia, a Globe Systems é comprometida  <br/>em trazer o que você precisa para sua empresa.</h3>
                 </div>
             </section>
-        <!--Parceiros-->
+            <!--Parceiros-->
             <section id="parceiros">
                 <div class="container-fluid parceiros text-center margin">
                     <h1>Parceiros</h1>
@@ -101,36 +110,78 @@
                 </div>
             </section>
         <!--Serviços-->
-            <section id="serviços">
+            <section id="servicos">
                 <div class="container-fluid text-center margin servicos">
                  <h1 class="margin" style="padding-top:0px;"> Serviços </h1>
                  <div class="container">
                     <div class="row">
-                        <div class="col-lg-5 card">
+                        <div id="card" class="col-lg-5 card">
                                 <p>Somos o numero 1° em suporte a celulares e <br/>homologação de sistemas tanto pequenos <br/>quanto grandes. 
                                     <br/>Ja atendemos mais de 2.000 empresas
                                 </p>
-                            <img src="./img/celular.jpg" width="100%">
+                            <img src="./img/celular.jpg" width="100%" class="rounded-circle">
                         </div>
                         <div class="col-lg-2"></div>
-                        <div class="col-lg-5 card">
+                        <div id="card2" class="col-lg-5 card">
                                 <p>
                                     Trabalhamos com as melhores tecnologias, e desenvolvedores, para garantir que suas <br/>expectativas sejam
                                     satisfeitas.<br/> E tambem cuidamos de nossos funcionários, <br/>dando o melhor ambiente para eles trabalharem.
                                 </p>
-                            <img src="./img/computer.jpeg" width="100%">
+                            <img src="./img/computer.jpeg" width="100%" class="rounded-circle">
                         </div>
 
                     </div>
                  </div>
                 </div>
-                
             </section>
 
+            <!--Script Darkmode-->
+            <script>
+               
+                const body = document.querySelector('body');
+                const nav = document.querySelector('nav');
+                const toggle = document.getElementById('toggle');
+                const quemsomos = document.getElementById('quemsomos');
+                const parceiros = document.getElementById('parceiros');
+                const servicos = document.getElementById('servicos');
+                const card = document.getElementById('card');
+                const card2 = document.getElementById('card2');
+                
+
+                toggle.onclick = function (){
+                    toggle.classList.toggle('active');
+                    body.classList.toggle('active');
+                    nav.classList.toggle('active');
+                    quemsomos.classList.toggle('active');
+                    parceiros.classList.toggle('active');
+                    servicos.classList.toggle('active');
+                    card.classList.toggle('active');
+                    card2.classList.toggle('active');
+                    
+                        
+                }
+              
+            </script>          
+            <script>
+                windows.onload = function(){
+                    mudaLogo();
+                }
+
+                function mudaLogo() {
+                    switch(document.getElementById('toggle').classList){
+                        case 1:
+                            document.getElementById('globopreto').src = "img/globopreto.png";
+                            break;
+                        case 2:
+                            document.getElementById('globopreto').src = "img/globobranco.png";
+                            break;
+                    }
+                }
+            </script>
         <!--Rodapé-->
-    <footer class="container-fluid text-center bg-footer margin">
+    <footer class="container-fluid text-center margin">
         <p>Desenvolvido por Melvin Marques</p>
-        <a href="https://github.com/melvinmarques1"><img src="./img/github.png" width="50"></a>
+        <a href="https://github.com/melvinmarques1"><img id="github" src="./img/github.png" width="50"></a>
     </footer>
     </body>
 
