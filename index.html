@@ -9,10 +9,10 @@
  
     </head>
 
-    <body>
+    <body id="corpo">
         <!---Menu do topo-->
             <nav class="navbar navbar-expand-lg navbar-light">
-                <img src="./img/globopreto.png" width="50" id="globopreto" value="logo">               
+                <img src="./img/globopreto.png" width="50" id="globopreto" alt="GloboPreto">               
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
                 </button>
@@ -47,7 +47,9 @@
                       <div class="d-flex">
                                   <!--Dark-mode button-->  
                              <div id="toggle" class="">
-                                 <i onchange="mudalogo();"  class="indicador"></i>
+                                <img  class="iconePreto" src="./img/light.png" width="25">
+                                <img  class="iconeBranco" src="./img/dark.png" width="33">
+                                 <i  class="indicador"></i>
                              </div>             
                       </div>
                 </div>
@@ -119,7 +121,7 @@
                                 <p>Somos o numero 1° em suporte a celulares e <br/>homologação de sistemas tanto pequenos <br/>quanto grandes. 
                                     <br/>Ja atendemos mais de 2.000 empresas
                                 </p>
-                            <img src="./img/celular.jpg" width="100%" class="rounded-circle">
+                            <img src="./img/celular.jpg" width="100%" class="imageCard">
                         </div>
                         <div class="col-lg-2"></div>
                         <div id="card2" class="col-lg-5 card">
@@ -127,7 +129,7 @@
                                     Trabalhamos com as melhores tecnologias, e desenvolvedores, para garantir que suas <br/>expectativas sejam
                                     satisfeitas.<br/> E tambem cuidamos de nossos funcionários, <br/>dando o melhor ambiente para eles trabalharem.
                                 </p>
-                            <img src="./img/computer.jpeg" width="100%" class="rounded-circle">
+                            <img src="./img/computer.jpeg" width="100%" class="imageCard">
                         </div>
 
                     </div>
@@ -136,48 +138,25 @@
             </section>
 
             <!--Script Darkmode-->
+            <script type="text/javascript" src="./js/darkmode.js"></script>   
             <script>
-               
-                const body = document.querySelector('body');
-                const nav = document.querySelector('nav');
-                const toggle = document.getElementById('toggle');
-                const quemsomos = document.getElementById('quemsomos');
-                const parceiros = document.getElementById('parceiros');
-                const servicos = document.getElementById('servicos');
-                const card = document.getElementById('card');
-                const card2 = document.getElementById('card2');
-                
+                    var corpo = document.getElementById("corpo");
+                    var corpoClass = corpo.className;
 
-                toggle.onclick = function (){
-                    toggle.classList.toggle('active');
-                    body.classList.toggle('active');
-                    nav.classList.toggle('active');
-                    quemsomos.classList.toggle('active');
-                    parceiros.classList.toggle('active');
-                    servicos.classList.toggle('active');
-                    card.classList.toggle('active');
-                    card2.classList.toggle('active');
-                    
-                        
-                }
-              
-            </script>          
-            <script>
-                windows.onload = function(){
-                    mudaLogo();
-                }
-
-                function mudaLogo() {
-                    switch(document.getElementById('toggle').classList){
-                        case 1:
-                            document.getElementById('globopreto').src = "img/globopreto.png";
+                    switch (corpoClass) {
+                        case "":
+                            function trocalogoP (){
+                                document.getElementById("globopreto").src = "./img/globopreto.png";
+                            }
                             break;
-                        case 2:
-                            document.getElementById('globopreto').src = "img/globobranco.png";
+                        case "active":
+                            function trocalogoB (){
+                                document.getElementById("globopreto").src = "./img/globobranco.png";
+                            }
                             break;
                     }
-                }
             </script>
+            
         <!--Rodapé-->
     <footer class="container-fluid text-center margin">
         <p>Desenvolvido por Melvin Marques</p>

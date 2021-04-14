@@ -50,6 +50,12 @@ nav.active {
     background: #b9b9b9;
     padding-top: 30px;
     padding-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+.imageCard {
+    border-radius: 20%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2),
+
 }
 
 #card.active {
@@ -69,6 +75,17 @@ footer.active {
     background: #363636;
 }
 
+.iconePreto {
+    position: relative;
+    top: 4;
+    left: 65;
+}
+
+.iconeBranco {
+    position: relative;
+    top: 4;
+    left: -25;
+}
 
 
 
