@@ -3,7 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Links */
+a:link, a:visited {
+    text-decoration: none;
+    color: #2b2b2b;
+}
+a:hover {
+    text-decoration: underline;
+    color: rgb(255, 255, 255)
+}
+a:active {
+    text-decoration: none;
+}
 
+/*Todo corpo do site, tanto a versão padrão, e a versão "active" que seria quando é mudado para o modo noturno*/
 body {
     background: #f8f8f8;
     transition: 0.5s;
@@ -16,14 +29,31 @@ body.active {
     color: aliceblue;
 }
 
+#globopreto.active {
+    filter:invert(100%);
+    transition: 0.5s;
+}
+
 nav.active {
     background-color:#363636 ;
-    color: aliceblue;
+    color: #f0f8ff;
     transition: 0.5s;
 }
 
 #quemsomos {
     background: #e9e9e9;
+    transition: 0.5s;
+}
+
+.imgTop {
+    transition: all 0.5s;
+    cursor: pointer;
+}
+.imgTop:hover {
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 #quemsomos.active {
@@ -32,6 +62,7 @@ nav.active {
 
 #parceiros {
     background: #cacaca;
+    transition: 0.5s;
 }
 
 #parceiros.active {   
@@ -40,6 +71,7 @@ nav.active {
 
 #servicos {
     background: #f8f8f8;
+    transition: 0.5s;
 }
 
 #servicos.active {
@@ -51,7 +83,14 @@ nav.active {
     padding-top: 30px;
     padding-bottom: 30px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    transition: all 0.5s;
+
 }
+.card:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
 .imageCard {
     border-radius: 20%;
     box-shadow: 0 8px 20px rgba(0,0,0,0.2),
@@ -66,6 +105,15 @@ nav.active {
     background: #5c5c5c;
 }
 
+#contato {
+    background: #e9e9e9;
+    transition: 0.5s;
+}
+
+#contato.active{
+    background: #616161;
+}
+
 .margin {
     padding-top: 50px;
     padding-bottom: 50px;
@@ -73,6 +121,7 @@ nav.active {
 
 footer.active {
     background: #363636;
+    transition: 0.5s;
 }
 
 .iconePreto {
