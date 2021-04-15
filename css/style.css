@@ -44,6 +44,50 @@ nav.active {
     background: #e9e9e9;
     transition: 0.5s;
 }
+.relative {
+    position: relative;
+    left: 50px;
+}
+
+.frasesEmp:hover .frase{
+    display: block;
+}
+
+.frase {
+    display: none;
+    width: 100%;
+    font-weight: bold;
+    font-size: 30px;
+    position: relative;
+    top: -5em;
+    left: -0,5em;
+    pointer-events: none;
+    transition: 1s;
+}
+
+.planejamento {
+    position: relative;
+    left: 30px;
+}
+
+.imgQuemsomos{
+    transition: all 0.5s;
+    cursor: pointer;
+    padding-bottom: 10px;
+    position: relative;
+    transition: all 0.5s;
+}
+
+.imgQuemsomos:hover {
+    -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    filter: opacity(50%);
+    transition: 0.5s;
+}
 
 .imgTop {
     transition: all 0.5s;
@@ -93,7 +137,8 @@ nav.active {
 
 .imageCard {
     border-radius: 20%;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.2),
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    max-width: 100%;
 
 }
 
@@ -134,6 +179,15 @@ footer.active {
     position: relative;
     top: 4;
     left: -25;
+}
+
+[href="#top"]{
+    padding:10px;
+    position:fixed;
+    top: 90%;
+    right:40px;
+    display:none;
+    font-size: 30px;
 }
 
 

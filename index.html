@@ -3,6 +3,7 @@
 
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <!--Bootstrap dependencias-->
         <link rel="stylesheet" type="text/css" href="./bootstrap/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -64,12 +65,30 @@
                       </div>
                 </div>
             </nav>
-
+            
             <!--Quem somos-->
             <section id="quemsomos">
                 <div class="container-fluid quemsomos text-center margin">
-                    <h1>Quem somos?</h1>
-                    <img src="./img/timedev.png" width="250" height="250" class="rounded-circle imgTop">
+                    <i class="fas fa-id-card fa-2x"></i>
+                        <h1 >Quem somos?</h1>
+                    <div class="container relative">
+                        <div class="row" >
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-3 frasesEmp">
+                                <img src="./img/timedev.png" width="250" height="250" class="rounded-circle imgQuemsomos">
+                                <span class="frase">Empenho</span>
+                            </div>
+                            <div class="col-sm-2 frasesEmp">
+                                <img src="./img/planejamento.jpg" width="250" height="250" class="rounded-circle imgQuemsomos">
+                                <span class="frase planejamento">Planejamento</span>
+                            </div>
+                            <div class="col-sm-5 frasesEmp">
+                                <img src="./img/acordo.jpg" width="250" height="250" class="rounded-circle imgQuemsomos">
+                                <span class="frase">Atingir expectativas</span>
+                            </div>
+                            
+                        </div>
+                    </div>
                     <h3>Somos os mais tops da galáxia, fundada por Melvin Marques <br/> a Globe Systems é comprometida em trazer 
                         o que <br/>você precisa para sua empresa.</h3>
                 </div>
@@ -78,6 +97,7 @@
             <!--Parceiros-->
             <section id="parceiros">
                 <div class="container-fluid parceiros text-center margin">
+                    <i class="fas fa-handshake fa-2x"></i>
                     <h1>Parceiros</h1>
                     <div class="container">
                         <div class="row">
@@ -96,37 +116,41 @@
             </section>
             <section id="azure">
                 <div class="container-fluid parceiros text-center margin">
-                    <h3>Microsoft Azure</h3>
+                    <i><h3>Microsoft Azure  <i class="fas fa-cloud fa-sm"></i></h3></i>
                     <p> 
                         O Microsoft Azure é um das melhores e maiores empresas na área de <br/>
                         serviços Clound, sendo referência no mundo. É uma das nossas maiores parceiras.
                     </p>
+                    
                 </div>
             </section>
             <section id="google">
                 <div class="container-fluid parceiros text-center margin">
-                    <h3>Google</h3>
+                    <i><h3>Google  <i class="fas fa-search fa-sm"></i></h3></i>
                     <p>
                         O que falar do Google? Uma das maiores empresas de tecnologia do mundo, referência no quesito sistema de pesquisa <br/>
                         na internet. E esta a frente de diversas iniciativas para acelerar o desenvolvimento de tecnologia no mundo e pesquisa cientifica.<br/>
                         Somos orgulhosos de dizer que é uma de nossas parceiras.
                     </p>
+                    
                 </div>
             </section>
             <section id="samsung">
                 <div class="container-fluid parceiros text-center margin">
-                    <h3>Samsung</h3>
+                    <i><h3>Samsung <i class="fas fa-mobile-alt fa-sm"></i></h3></i>
                     <p>
                         A Samsung, uma das maiores no ramo de tecnologia, atualmente preenche um grande espaço no mercado de <br/>
                         celulares no mundo, batendo de frente com a Apple. Sem buscando inovação e avanço para a tecnologia.<br/>
                         É uma das nossas forças como parceira.
                     </p>
+                    
                 </div>
             </section>
 
         <!--Serviços-->
             <section id="servicos">
                 <div class="container-fluid text-center margin servicos">
+                <i class="fas fa-tools fa-2x"></i>
                  <h1 class="margin" style="padding-top:0px;"> Serviços </h1>
                  <div class="container">
                     <div class="row">
@@ -152,7 +176,8 @@
             <!--Contato-->
             <section id="contato">
                 <div class="container-fluid text-center margin contato">
-                    <h1 class="margin" style="padding-bottom: 0px;">Contato</h1>
+                    <i class="far fa-comments fa-2x"></i>
+                    <h1 class="margin" style="padding-bottom: 0px; padding-top: 0px;">Contato</h1>
                     <p>Ficou interessado em saber mais sobre nós ou contratar nossos serviços?
                         <br/>Nos mande uma mensagem abaixo e responderemos o mais rápido possivel.
                     </p>
@@ -180,11 +205,14 @@
                                </div>                         
                         </div>
                         <br/>
-                        <button type="submit" class="btn btn-outline-dark">Enviar</button>
+                        <button type="submit" class="btn btn-outline-dark">Enviar  <i class="fas fa-envelope"></i></button>
                     </form>
                 </div>
 
             </section>
+            <script type="text/javascript" src="./js/voltaTopo.js"></script> 
+            <i href="#top" class="fas fa-arrow-circle-up fa-2x"></i>
+
             
             <!--Script Darkmode-->
             <script type="text/javascript" src="./js/darkmode.js"></script> 
@@ -196,7 +224,7 @@
         <!--Rodapé-->
     <footer class="container-fluid text-center margin">
         <p>Desenvolvido por Melvin Marques</p>
-        <a href="https://github.com/melvinmarques1"><i class="fab fa-github" data-toggle="tooltip" data-placement="top" title="GitHub"></i></a>
+        <a href="https://github.com/melvinmarques1"><i class="fab fa-github fa-2x" data-toggle="tooltip" data-placement="top" title="GitHub"></i></a>
     </footer>
     </body>
 
